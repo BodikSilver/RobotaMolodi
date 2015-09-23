@@ -42,6 +42,7 @@
             @foreach($industries as $industry)
                 <option value="{{$industry->id}}"> {{$industry->name}} </option>
             @endforeach
+            <option value="{{$resume->industry}}" selected>{{$resume->Industry()->name}}</option>
         </select>
     </div>
     <div class="form-group {{$errors-> has('position') ? 'has-error' : ''}}">
