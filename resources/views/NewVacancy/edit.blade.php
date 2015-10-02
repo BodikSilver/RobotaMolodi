@@ -93,7 +93,7 @@
 
 
     <div class="col-sm-offset-2 col-sm-10" style="margin-top: 20px">
-        <input type="submit" class="btn btn-default" style="background: #a7eebe" value="Зареєструвати вакансію">
+        <input type="submit" class="btn btn-default" style="background: #ee6304" value="Зареєструвати вакансію">
     </div>
     {!!Form::token()!!}
     {!!Form::close()!!}
