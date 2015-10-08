@@ -19,7 +19,8 @@ class cabinetController extends Controller {
 	{
         if(Auth::check())
         {
-            return Redirect::to('resume');
+            /*return Redirect::to('resume');*/
+			return Redirect::to('vacancy');
         }
         else
         {
