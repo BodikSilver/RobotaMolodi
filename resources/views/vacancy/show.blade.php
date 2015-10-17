@@ -126,17 +126,29 @@
             function PasteFile(){
              @if(Auth::check())
                {
+                    var inputDiv = document.getElementById('inputDiv');
+                    var display = inputDiv.style.display;
+                    if (display == "block") {
+                        inputDiv.style.display = "none";
 
-                        var inputDiv = document.getElementById('inputDiv');
-                        var display = inputDiv.style.display;
-                        if (display == "block") {
-                            inputDiv.style.display = "none";
+                    }
+                    else {
+                        document.getElementById('linkDiv').style.display = "none";
+                        inputDiv.style.display = "block";
+                    }
 
+                    $("input[name='Load']").onChange(function () {
+                        var file = $(this).val();
+dd(file);
+                        if(file.substring(file.lastIndexOf('.')+1,file.length).toLowerCase()!='txt'||'doc')
+                        {
+                            alert('Необходимо выбрать файл file.txt');
+
+                            return;
                         }
-                        else {
-                            document.getElementById('linkDiv').style.display = "none";
-                            inputDiv.style.display = "block";
-                        }
+
+
+
 //                $(input[name='Load']).validate({
 //                    rules: {
 //                        file: {
